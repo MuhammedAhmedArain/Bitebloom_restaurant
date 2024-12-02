@@ -1,0 +1,88 @@
+#slides {
+  position: relative;
+}
+#slides .slides-container {
+  display: none;
+}
+#slides .scrollable {
+  zoom: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+#slides .scrollable:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+.slides-navigation a.prev {
+  left: 0;
+  background-color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFD700; /* Gold color */
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.slides-navigation a.next {
+  right: 0;
+  background-color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFD700; /* Gold color */
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.slides-navigation a:hover {
+  background-color: #FFD700; /* Gold color */
+  color: #000;
+}
+
+.slides-pagination {
+  position: absolute;
+  z-index: 3;
+  bottom: 10px; /* Adjusted to ensure visibility */
+  text-align: center;
+  width: 100%;
+}
+.slides-pagination a {
+  border: 2px solid #FFD700; /* Gold border */
+  border-radius: 15px;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #000; /* Black background */
+  margin: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.slides-pagination a.current {
+  background-color: #FFD700; /* Gold color */
+  border-color: #FFD700; /* Gold border */
+}
+.slides-pagination a:hover {
+  background-color: #FFD700; /* Gold color */
+  border-color: #FFD700; /* Gold border */
+}
