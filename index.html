@@ -1,5 +1,18 @@
-<?php session_start(); ?>
-<?php include "header.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitebloom Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <!-- Include your header HTML content directly -->
+</header>
 
 <!-- Start slides -->
 <div id="slides" class="cover-slides">
@@ -82,36 +95,26 @@
         </div>
 
         <div class="row inner-menu-box">
-            <div class="col-3">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill" href="#v-pills-all" role="tab" aria-controls="v-pills-all" aria-selected="true">All</a>
-                    <a class="nav-link" id="v-pills-appetizers-tab" data-toggle="pill" href="#v-pills-appetizers" role="tab" aria-controls="v-pills-appetizers" aria-selected="false">Appetizers</a>
-                    <a class="nav-link" id="v-pills-maincourse-tab" data-toggle="pill" href="#v-pills-maincourse" role="tab" aria-controls="v-pills-maincourse" aria-selected="false">Main Course</a>
-                    <a class="nav-link" id="v-pills-desserts-tab" data-toggle="pill" href="#v-pills-desserts" role="tab" aria-controls="v-pills-desserts" aria-selected="false">Desserts</a>
+            <!-- Static example menu items -->
+            <div class="col-lg-4 col-md-6 special-grid">
+                <div class="gallery-single fix">
+                    <img src="images/sample_dish.jpg" class="img-fluid" alt="Sample Dish">
+                    <div class="why-text">
+                        <h4>Sample Dish</h4>
+                        <p>A delicious sample description.</p>
+                        <p>₹500</p>
+                        <a class="btn btn-sm btn-outline-dark" href="#">Add to Cart</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-9">
-                <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-all" role="tabpanel" aria-labelledby="v-pills-all-tab">
-                        <div class="row">
-                            <?php
-                            include "connect.php";
-                            $result = mysqli_query($con, "SELECT * FROM menu");
-                            while ($row = mysqli_fetch_array($result)) { ?>
-                                <div class="col-lg-4 col-md-6 special-grid">
-                                    <div class="gallery-single fix">
-                                        <img src="admin/<?php echo $row['image']; ?>" class="img-fluid" alt="Menu Item">
-                                        <div class="why-text">
-                                            <h4><?php echo $row['title']; ?></h4>
-                                            <p><?php echo $row['description']; ?></p>
-                                            <p>₹<?php echo $row['price']; ?></p>
-                                            <a class="btn btn-sm btn-outline-dark" href="addcart.php?pid=<?php echo $row['id']; ?>">Add to Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php } ?>
-                        </div>
+            <div class="col-lg-4 col-md-6 special-grid">
+                <div class="gallery-single fix">
+                    <img src="images/sample_dish2.jpg" class="img-fluid" alt="Sample Dish 2">
+                    <div class="why-text">
+                        <h4>Sample Dish 2</h4>
+                        <p>Another great sample description.</p>
+                        <p>₹600</p>
+                        <a class="btn btn-sm btn-outline-dark" href="#">Add to Cart</a>
                     </div>
                 </div>
             </div>
@@ -120,4 +123,10 @@
 </div>
 <!-- End Menu -->
 
-<?php include "footer.php"; ?>
+<!-- Footer -->
+<footer>
+    <!-- Include your footer HTML content directly -->
+</footer>
+
+</body>
+</html>
